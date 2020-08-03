@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://labixioazhan.github.io/2020/08/03/Maven/Maven4.png">
 <meta property="og:image" content="https://labixioazhan.github.io/2020/08/03/Maven/Maven5.png">
 <meta property="og:image" content="https://labixioazhan.github.io/2020/08/03/Maven/Maven6.png">
-<meta property="og:updated_time" content="2020-08-03T08:04:59.728Z">
+<meta property="og:updated_time" content="2020-08-03T11:41:23.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Maven的安装与配置">
 <meta name="twitter:description" content="Mavenmaven的安装 检查JDK版本,打开命令行输入java -version,如果报错可能是没有配置环境变量导致的,给java配置环境变量  将下载好的maven压缩包解压,解压后的路径最好不要使用中文和空格\  配置maven的环境变量  打开命令行输入mvn -v检查是否安装成功  maven设置本地仓库路径和更改仓库镜像   123456789101112&amp;lt;?xml versi">
@@ -160,7 +160,13 @@
   
 
         
-        <a href="/2020/08/03/Maven/" class="archive-article-date">
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/08/03/Maven/" class="archive-article-date">
   	<time datetime="2020-08-03T06:16:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
 </a>
         
@@ -181,6 +187,7 @@
 </li>
 </ol>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/SETTINGS/1.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 本地仓库地址 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>你本地仓库的目录位置<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- 阿里仓库镜像 --&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">mirror</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span> 	<span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span> <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h4 id="maven构建java-web项目"><a href="#maven构建java-web项目" class="headerlink" title="maven构建java-web项目"></a>maven构建java-web项目</h4><ol>
 <li>新建项目</li>
 </ol>
@@ -339,6 +346,26 @@
 
 
   
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Maven" data-title="Maven的安装与配置" data-url="https://labixioazhan.github.io/2020/08/03/Maven/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
   
   
 
@@ -363,6 +390,17 @@
       	</div>
     </div>
   </div>
+  
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_site_pv">
+                本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv" style='display:none'>
+                本站访客数<span id="busuanzi_value_site_uv"></span>人
+        </span>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
 </footer>
     </div>
     <script>
