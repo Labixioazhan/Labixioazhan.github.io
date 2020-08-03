@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Labixiaozhan的博客</title>
+  <icon>https://www.gravatar.com/avatar/ee17f23a896255a7e4853fa0de3cbeb8</icon>
+  <subtitle>傲傲娇娇哼哼唧唧</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://labixioazhan.github.io/"/>
+  <updated>2020-08-03T08:04:59.728Z</updated>
+  <id>https://labixioazhan.github.io/</id>
+  
+  <author>
+    <name>徐展</name>
+    <email>616534746@qq.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Maven的安装与配置</title>
+    <link href="https://labixioazhan.github.io/2020/08/03/Maven/"/>
+    <id>https://labixioazhan.github.io/2020/08/03/Maven/</id>
+    <published>2020-08-03T06:16:45.000Z</published>
+    <updated>2020-08-03T08:04:59.728Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h3><h4 id="maven的安装"><a href="#maven的安装" class="headerlink" title="maven的安装"></a>maven的安装</h4><ol><li><p>检查JDK版本,打开命令行输入java -version,如果报错可能是没有配置环境变量导致的,给java配置环境变量</p></li><li><p>将下载好的maven压缩包解压,<strong>解压后的路径最好不要使用中文和空格</strong>\</p></li><li><p>配置maven的环境变量</p></li><li><p>打开命令行输入mvn -v检查是否安装成功</p></li><li><p>maven设置本地仓库路径和更改仓库镜像</p></li></ol><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/SETTINGS/1.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 本地仓库地址 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>你本地仓库的目录位置<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- 阿里仓库镜像 --&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">mirror</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span> <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span> <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="maven构建java-web项目"><a href="#maven构建java-web项目" class="headerlink" title="maven构建java-web项目"></a>maven构建java-web项目</h4><ol><li>新建项目</li></ol><p><img src="/2020/08/03/Maven/Maven1.png" alt></p><ol start="2"><li><p>选择项目路径和填写项目名    </p><p><strong>maven项目结构</strong></p><p><img src="/2020/08/03/Maven/Maven2.png" alt></p><p>​        补充:在测试类中也可以生成一个资源文件,当测试类运行时会优先使用测试类中配置文件</p><p><strong>设置打包方式</strong></p><p><img src="/2020/08/03/Maven/Maven3.png" alt></p><p>​                                war方式是打成war包</p></li></ol><p><strong>导入依赖</strong></p><p><img src="/2020/08/03/Maven/Maven4.png" alt></p><p>​            <em>scoper</em>属性:默认是complie</p><p>​                    complie:编码有效,在编译和打包时都会将依赖项加入进去</p><p>​                    test:测试有效,只在使用测试时使用,编译打包不会加载该项</p><p>​                    provided:编译和测试范围有效,但是打包时不会加入</p><p>​                    runtime:运行时加载依赖项,编译时不依赖</p><p>​            Maven依赖的网站:<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></p><p><strong>修改项目运行的编译环境和配置Tomcat插件</strong></p><p><img src="/2020/08/03/Maven/Maven5.png" alt></p><p><strong>Tomcat启动</strong></p><p><img src="/2020/08/03/Maven/Maven6.png" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Maven&quot;&gt;&lt;a href=&quot;#Maven&quot; class=&quot;headerlink&quot; title=&quot;Maven&quot;&gt;&lt;/a&gt;Maven&lt;/h3&gt;&lt;h4 id=&quot;maven的安装&quot;&gt;&lt;a href=&quot;#maven的安装&quot; class=&quot;headerlink&quot; titl
+      
+    
+    </summary>
+    
+    
+      <category term="Maven" scheme="https://labixioazhan.github.io/tags/Maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>myPhoto</title>
+    <link href="https://labixioazhan.github.io/2020/08/02/myPhoto/"/>
+    <id>https://labixioazhan.github.io/2020/08/02/myPhoto/</id>
+    <published>2020-08-02T06:00:05.000Z</published>
+    <updated>2020-08-03T08:21:33.402Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/2020/08/02/myPhoto/iu.jpg" alt="我的iu"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/2020/08/02/myPhoto/iu.jpg&quot; alt=&quot;我的iu&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="photo" scheme="https://labixioazhan.github.io/tags/photo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://labixioazhan.github.io/2020/08/02/hello-world/"/>
+    <id>https://labixioazhan.github.io/2020/08/02/hello-world/</id>
+    <published>2020-08-02T02:16:46.560Z</published>
+    <updated>2020-08-02T02:16:46.560Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>

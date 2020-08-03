@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://labixioazhan.github.io">
   <title>Labixiaozhan的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="程序员小白">
+<meta name="keywords" content="希望童昕小朋友考编成功!">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Labixiaozhan的博客">
 <meta property="og:url" content="https://labixioazhan.github.io/index.html">
 <meta property="og:site_name" content="Labixiaozhan的博客">
 <meta property="og:description" content="程序员小白">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="徐展">
-<meta property="article:tag" content="希望童昕小朋友考编成功!">
+<meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Labixiaozhan的博客">
+<meta name="twitter:description" content="程序员小白">
   
     <link rel="alternative" href="/atom.xml" title="Labixiaozhan的博客" type="application/atom+xml">
   
@@ -35,8 +36,8 @@
 
   
 
-<meta name="generator" content="Hexo 5.0.0"></head>
-
+</head>
+</html>
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -49,15 +50,15 @@
 			<img src="/assets/me.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/"></a></h1>
+		  <h1 class="header-author"><a href="/">徐展</a></h1>
 		</hgroup>
+		
+		<p class="header-subtitle">傲傲娇娇哼哼唧唧</p>
 		
 
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/null">Labixioazhan</a></li>
-	        
 				<li><a href="/">主页</a></li>
 	        
 				<li><a href="/photos/">相册</a></li>
@@ -99,12 +100,12 @@
 				<img src="/assets/me.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author"></h1>
+			  <h1 class="header-author js-header-author">徐展</h1>
 			</hgroup>
 			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>傲傲娇娇哼哼唧唧<i class="icon icon-quo-right"></i></p>
 			
 			
-				
 			
 				
 			
@@ -119,14 +120,12 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/null">Labixioazhan</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/photos/">相册</a></li>
+					<li style="width: 50%"><a href="/photos/">相册</a></li>
 		        
 				</ul>
 			</nav>
@@ -175,34 +174,33 @@
 <li><p>maven设置本地仓库路径和更改仓库镜像</p>
 </li>
 </ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 本地仓库地址 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>你本地仓库的目录位置<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- 阿里仓库镜像 --&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">mirror</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span>     <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span> <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/SETTINGS/1.0.0"</span> <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 本地仓库地址 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>你本地仓库的目录位置<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- 阿里仓库镜像 --&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">mirror</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span> 	<span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span> <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="maven构建java-web项目"><a href="#maven构建java-web项目" class="headerlink" title="maven构建java-web项目"></a>maven构建java-web项目</h4><ol>
 <li>新建项目</li>
 </ol>
-<p><img src="/.io//Maven1.png"></p>
+<p><img src="/2020/08/03/Maven/Maven1.png" alt></p>
 <ol start="2">
 <li><p>选择项目路径和填写项目名    </p>
 <p><strong>maven项目结构</strong></p>
-<p><img src="/.io//Maven2.png"></p>
+<p><img src="/2020/08/03/Maven/Maven2.png" alt></p>
 <p>​        补充:在测试类中也可以生成一个资源文件,当测试类运行时会优先使用测试类中配置文件</p>
 <p><strong>设置打包方式</strong></p>
-<p><img src="/.io//Maven3.png"></p>
+<p><img src="/2020/08/03/Maven/Maven3.png" alt></p>
 <p>​                                war方式是打成war包</p>
 </li>
 </ol>
 <p><strong>导入依赖</strong></p>
-<p><img src="/.io//Maven4.png"></p>
+<p><img src="/2020/08/03/Maven/Maven4.png" alt></p>
 <p>​            <em>scoper</em>属性:默认是complie</p>
 <p>​                    complie:编码有效,在编译和打包时都会将依赖项加入进去</p>
 <p>​                    test:测试有效,只在使用测试时使用,编译打包不会加载该项</p>
 <p>​                    provided:编译和测试范围有效,但是打包时不会加入</p>
 <p>​                    runtime:运行时加载依赖项,编译时不依赖</p>
-<p>​            Maven依赖的网站:<a target="_blank" rel="noopener" href="https://mvnrepository.com/">https://mvnrepository.com/</a></p>
+<p>​            Maven依赖的网站:<a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a></p>
 <p><strong>修改项目运行的编译环境和配置Tomcat插件</strong></p>
-<p><img src="/.io//Maven5.png"></p>
+<p><img src="/2020/08/03/Maven/Maven5.png" alt></p>
 <p><strong>Tomcat启动</strong></p>
-<p><img src="/.io//Maven6.png"></p>
+<p><img src="/2020/08/03/Maven/Maven6.png" alt></p>
 
       
 
@@ -276,7 +274,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/.io//iu.jpg" alt="我的iu"></p>
+        <p><img src="/2020/08/02/myPhoto/iu.jpg" alt="我的iu"></p>
 
       
 
@@ -350,19 +348,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
 
