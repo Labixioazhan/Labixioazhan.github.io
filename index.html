@@ -143,6 +143,119 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Maven的安装与配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="2020/08/03/Maven的安装与配置/">Maven的安装与配置</a>
+    </h1>
+  
+
+        
+        <a href="2020/08/03/Maven的安装与配置/" class="archive-article-date">
+  	<time datetime="2020-08-03T06:16:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h3><h4 id="maven的安装"><a href="#maven的安装" class="headerlink" title="maven的安装"></a>maven的安装</h4><ol>
+<li><p>检查JDK版本,打开命令行输入java -version,如果报错可能是没有配置环境变量导致的,给java配置环境变量</p>
+</li>
+<li><p>将下载好的maven压缩包解压,<strong>解压后的路径最好不要使用中文和空格</strong>\</p>
+</li>
+<li><p>配置maven的环境变量</p>
+</li>
+<li><p>打开命令行输入mvn -v检查是否安装成功</p>
+</li>
+<li><p>maven设置本地仓库路径和更改仓库镜像</p>
+</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">settings</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 本地仓库地址 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>你本地仓库的目录位置<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrors</span>&gt;</span> </span><br><span class="line">        <span class="comment">&lt;!-- 阿里仓库镜像 --&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">mirror</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span>     <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span> <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mirror</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">mirrors</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="maven构建java-web项目"><a href="#maven构建java-web项目" class="headerlink" title="maven构建java-web项目"></a>maven构建java-web项目</h4><ol>
+<li>新建项目</li>
+</ol>
+<p><img src="/2020/08/03//blog\source_posts\Maven的安装与配置\Maven1.png"></p>
+<ol start="2">
+<li><p>选择项目路径和填写项目名    </p>
+<p><strong>maven项目结构</strong></p>
+<p><img src="/2020/08/03//blog\source_posts\Maven的安装与配置\Maven2.png"></p>
+<p>​        补充:在测试类中也可以生成一个资源文件,当测试类运行时会优先使用测试类中配置文件</p>
+<p><strong>设置打包方式</strong></p>
+<p><img src="/2020/08/03//blog\source_posts\Maven的安装与配置\Maven3.png"></p>
+<p>​                                war方式是打成war包</p>
+</li>
+</ol>
+<p><strong>导入依赖</strong></p>
+<p><img src="/2020/08/03//blog\source_posts\Maven的安装与配置\Maven4.png"></p>
+<p>​            <em>scoper</em>属性:默认是complie</p>
+<p>​                    complie:编码有效,在编译和打包时都会将依赖项加入进去</p>
+<p>​                    test:测试有效,只在使用测试时使用,编译打包不会加载该项</p>
+<p>​                    provided:编译和测试范围有效,但是打包时不会加入</p>
+<p>​                    runtime:运行时加载依赖项,编译时不依赖</p>
+<p>​            Maven依赖的网站:<a target="_blank" rel="noopener" href="https://mvnrepository.com/">https://mvnrepository.com/</a></p>
+<p><strong>修改项目运行的编译环境和配置Tomcat插件</strong></p>
+<p><img src="/2020/08/03//blog\source_posts\Maven的安装与配置\Maven5.png"></p>
+<p><strong>Tomcat启动</strong></p>
+<p><img src="/2020/08/03//blog\source_posts\Maven的安装与配置\Maven6.png"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="2020/08/03/Maven的安装与配置/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-myPhoto" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -163,7 +276,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/assets/iu.jpg" >
+        <img src="/2020/08/02//iu.jpg">
       
 
       
@@ -378,6 +491,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">photo</a>
