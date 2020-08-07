@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://labixioazhan.github.io">
-  <title>相册 | Labixiaozhan的博客</title>
+  <title>spring基础 | Labixiaozhan的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Photos 	Video   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($sc">
-<meta name="keywords" content="希望童昕小朋友考编成功!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="https://labixioazhan.github.io/photos/index.html">
+  <meta name="description" content="一 装配bean1.1 自动化装配Spring会从两个角度来实现自动化装配: ​                组件扫描:Spring会自动发现应用上下文中所创建的bean. ​                自动装配:Spring自动满足bean之间的依赖 @component注解用在类上表明该类会作为组件,并且告知Spring要为这个类创建bean 但是组件扫描默认时不启用的,需要显示配置sp">
+<meta name="keywords" content="Spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="spring基础">
+<meta property="og:url" content="https://labixioazhan.github.io/2020/08/07/spring基础/index.html">
 <meta property="og:site_name" content="Labixiaozhan的博客">
-<meta property="og:description" content="Photos 	Video   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($sc">
+<meta property="og:description" content="一 装配bean1.1 自动化装配Spring会从两个角度来实现自动化装配: ​                组件扫描:Spring会自动发现应用上下文中所创建的bean. ​                自动装配:Spring自动满足bean之间的依赖 @component注解用在类上表明该类会作为组件,并且告知Spring要为这个类创建bean 但是组件扫描默认时不启用的,需要显示配置sp">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-08-02T10:10:44.485Z">
+<meta property="og:updated_time" content="2020-08-07T08:59:12.961Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相册">
-<meta name="twitter:description" content="Photos 	Video   	图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($sc">
+<meta name="twitter:title" content="spring基础">
+<meta name="twitter:description" content="一 装配bean1.1 自动化装配Spring会从两个角度来实现自动化装配: ​                组件扫描:Spring会自动发现应用上下文中所创建的bean. ​                自动装配:Spring自动满足bean之间的依赖 @component注解用在类上表明该类会作为组件,并且告知Spring要为这个类创建bean 但是组件扫描默认时不启用的,需要显示配置sp">
   
     <link rel="alternative" href="/atom.xml" title="Labixiaozhan的博客" type="application/atom+xml">
   
@@ -141,42 +141,92 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-photos" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-spring基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      相册
+      spring基础
     </h1>
   
 
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/08/07/spring基础/" class="archive-article-date">
+  	<time datetime="2020-08-07T08:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
+</a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <link rel="stylesheet" href="./ins.css">
-<div class="photos-btn-wrap">
-	<a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Photos</a>
-	<a class="photos-btn" href="#">Video</a>
-</div>
-<div class="instagram itemscope">
-	<a href="https:Labixioazhan.github.io/" target="_blank" class="open-ins">图片正在加载中…</a>
-</div>
-<script>
-  (function() {
-    var loadScript = function(path) {
-      var $script = document.createElement('script')
-      document.getElementsByTagName('body')[0].appendChild($script)
-      $script.setAttribute('src', path)
-    }
-    setTimeout(function() {
-      loadScript('./ins.js')
-    }, 0)
-  })()
-</script>
+        <h4 id="一-装配bean"><a href="#一-装配bean" class="headerlink" title="一 装配bean"></a>一 装配bean</h4><h5 id="1-1-自动化装配"><a href="#1-1-自动化装配" class="headerlink" title="1.1 自动化装配"></a>1.1 自动化装配</h5><p>Spring会从两个角度来实现自动化装配:</p>
+<p>​                组件扫描:Spring会自动发现应用上下文中所创建的bean.</p>
+<p>​                自动装配:Spring自动满足bean之间的依赖</p>
+<p>@component注解用在类上表明该类会作为组件,并且告知Spring要为这个类创建bean</p>
+<p>但是组件扫描默认时不启用的,需要显示配置spring,让它去寻找带有@component注解的类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configtuation</span></span><br><span class="line"><span class="meta">@ComponentScan</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">XXXConfig</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>@componentScan注解默认会扫描与配置类相同的包以及该包下所有子包,查找带有@Component注解的类为其创建一个bean </p>
+<p>@componentScan(“包名”)可以单独设置扫描的包 </p>
+<p>@Component(basePackages={“包名1”,”包名2”})设置扫描多个包</p>
+<p> @Component(basePackageClasses={xxx.class,vvv.class}来为指定包中所包含的接口和类</p>
+<p>@Configtuation注解用于告诉Spring这是一个配置类</p>
+<p>还可以使用xml方式开启组件扫描:可以使用Springcontext命名空间</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span> = <span class="string">"包名"</span></span></span><br></pre></td></tr></table></figure>
+<h5 id="1-2为组件扫描的bean命名"><a href="#1-2为组件扫描的bean命名" class="headerlink" title="1.2为组件扫描的bean命名"></a>1.2为组件扫描的bean命名</h5><p>默认情况下,spring会根据类名将首字母小写作为bean的id.</p>
+<p>在使用@component注解时可以传入bean的值 @Component(“name”)或者使用@named(“name)为bean起名 </p>
+<h5 id="1-3通过为bean添加注解实现自动装配"><a href="#1-3通过为bean添加注解实现自动装配" class="headerlink" title="1.3通过为bean添加注解实现自动装配"></a>1.3通过为bean添加注解实现自动装配</h5><p>@Autowired注解不仅能用在构造器上,还能用在setter方法上.如果有且只用一个bean匹配依赖需求,那么这个bean就会被装配,如果没有匹配的bean,那么在应用上下文创建的时候Spring会抛出异常.为了避免该异常你可以使用@Autowired(required=false).这样Spring会尝试自动装配,如果没有匹配的bean,会让这个bean为未装配状态,但是如果你在代码中没有进行null检查的话,就会出来你空指针异常</p>
+<p>@AutoWired时spring特定注解,如果你不想使用可以使用@Inject(源于java依赖注入桂发)注解来替换</p>
+<h5 id="1-4通过java代码来装配bean"><a href="#1-4通过java代码来装配bean" class="headerlink" title="1.4通过java代码来装配bean"></a>1.4通过java代码来装配bean</h5><p>有的时候自动化装配是行不通,比如将第三方库中的组件装配到你的应用中,这时候没办法使用@Component注解只能配置Spring来实现</p>
+<p>使用@Configuration来创建一个配置类,在该类中使用@Bean注解来创建bean,该注解会告诉Spring这个方法会返回一个对象,该对象注册为Spring应用上下文中的bean,同时也可以使用name=“”属性指定一个名称.</p>
+<p><strong>通过xml装配bean:</strong></p>
+<p>创建xml配置规范,然后创建</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span><span class="attr">a</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--方式一直接创建bean--&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"权限定类名"</span> <span class="attr">id</span>=<span class="string">"bean名称"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--方式二使用构造器创建bean--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"权限定类名"</span> <span class="attr">id</span>=<span class="string">"bean名称"</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">ref</span>=<span class="string">"配置过bean的id"</span> </span></span><br><span class="line"><span class="tag">                         <span class="attr">value</span>=<span class="string">"要注入的值"</span>&gt;</span><span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">constructor-arg</span> &gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">            	<span class="tag">&lt;<span class="name">value</span>&gt;</span>传入构造器所需的值<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">ref</span> <span class="attr">bean</span>= <span class="string">"已配置过的beanid"</span>&gt;</span>传入bean对象<span class="tag">&lt;/<span class="name">ref</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">constructor-arg</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"设置的属性名"</span> <span class="attr">ref</span> = <span class="string">""</span>&gt;</span>为bean对象设置属性值<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>@Improt导入将配置类组和在一起</p>
+<h4 id="二-高级装配"><a href="#二-高级装配" class="headerlink" title="二 高级装配"></a>二 高级装配</h4><p>#####　2.1条件化的bean</p>
+<p>假如你希望一个或者多个bean只有在应用的路径下包含特定的库时才创建或者我们希望某个bean 只有当另外特定的bean声明之后创建.这个时候可以使用@Conditional注解,可以用到带有@bean注解的方法上,给定计算结果为真时才会创建bean对象,否则就会忽略.</p>
+<p>@Conditonal注解中会指明一个Class,会通过Condition接口进行对比,设置@Conditional的类可以是任意实现类Condition接口的类型,只需提供matcher()方法</p>
+<p>ConditionContext接口可以借助getRegistry()检查bean的定义,借助getBeanFactory()检查版是否存在.借助getEnvironment()返回Environment检查环境变量是否存在以及值是什么,借助getClassLoader()返回的ClassLoader加载并检查类是否存在</p>
+<h5 id="2-2处理自动装配的歧义行"><a href="#2-2处理自动装配的歧义行" class="headerlink" title="2.2处理自动装配的歧义行"></a>2.2处理自动装配的歧义行</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDessert</span><span class="params">(Dessert sessert)</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cake</span> <span class="keyword">implements</span> <span class="title">Dessert</span></span>&#123;&#125;</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Cookie</span> <span class="keyword">implements</span> <span class="title">Dessert</span></span>&#123;&#125;</span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IceCream</span> <span class="keyword">implements</span> <span class="title">Dessert</span></span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<p>因为三个实现类均使用类@component注解,组件扫描是,能够发现并且创建spring应用上下文里的bean,当自动装配setDessert时就会发生歧义,不知道该选择哪个bean装配,Spring会抛出NoUniqueBeanDefinitionException异常.</p>
+<p>@Primary和@Component组合使用,可以使得该bean被设置为首选,但是如果当首选bean数量超过一个是就没办法缩小范围.这个时候使用@qualifier(“name”)注解和@Autowired组合使用,将自己想要注入的bean注入.</p>
+<h5 id="2-3bean的作用域"><a href="#2-3bean的作用域" class="headerlink" title="2.3bean的作用域"></a>2.3bean的作用域</h5><p>默认情况下,Spring应用上下文中的所有bean都是以单例(singleton)的,不管注入多少次,都只是注入同一个实例</p>
+<p>@Scope注解来为bean指明作用域,也可以在xml文件声明bean 使用scope属性来改变bean的作用域.</p>
+<p>单例singleton:整个应用中,只创建beany一次</p>
+<p>原型Prototype:每次注入或者通过Spring上下文获取的时候,都会创建一个bean实例.</p>
+<p>会话Session:在web应用中,为每一个会话创建一个bean实例</p>
+<p>请求Request:在web应用中,为每一个请求创建一个bean实例</p>
+<p>在xml中不能直接使用scope来声明会话或者请求域的bean,需要使用proxyMode属性来设置,声明作用域代理</p>
+<h4 id="三-面向切面的Spring"><a href="#三-面向切面的Spring" class="headerlink" title="三 面向切面的Spring"></a>三 面向切面的Spring</h4><h4 id="4-1AOP"><a href="#4-1AOP" class="headerlink" title="4.1AOP"></a>4.1AOP</h4><p>通知:定义切面是什么以及何时使用</p>
+<p>​        前置通知Before:在目标方法被调用之前使用</p>
+<p>​        后置通知After:在目标方法完成后调用通知,此时不关心输出是什么</p>
+<p>​        返回通知:After-returning:在目标方法成功执行之后调用通知</p>
+<p>​        异常通知:After-throwing:在目标方法抛出异常后调用通知</p>
+<p>​        环绕通知Around:通知包裹了被通知的方法,在被通知的方法到调用之前和之后执行自定义行为</p>
+<p>连接点:连接点是应用在执行过程中能够切入面的一个点</p>
+<p>切点:定义了何处,切点定义会匹配通知索要织入的一个或者多个连接点</p>
+<p>切面Aspect:通知和切点的节后,</p>
+<p>引入Introduction:向向有的类添加新的方法</p>
+<p>织入Weaving:把切面应用到目标对象并创建新的代理对象的过程</p>
+<h5 id="基于xml实现aop的通知"><a href="#基于xml实现aop的通知" class="headerlink" title="基于xml实现aop的通知"></a>基于xml实现aop的通知</h5><p>直接使用业务层模拟个业务的执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 账户的业务层接口</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> xuzhan</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IAccountService</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 模拟保存账户</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">saveAccount</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 模拟更新账户</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> i</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">updateAccount</span><span class="params">(<span class="keyword">int</span> i)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 模拟删除账户</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">deleteAccount</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccountServiceImpl</span> <span class="keyword">implements</span> <span class="title">IAccountService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">saveAccount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"执行了保存"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateAccount</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"执行了更新"</span> + i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">deleteAccount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"执行了删除"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>logger类中的方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用于记录日志的工具类,提供公共的代码</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> xuzhan</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Logger</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 前置通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">beforePrintLog</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"前置通知Logger类中的beforePrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 异常通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterThrowingPrintLog</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"异常通知Logger类中的afterThrowingPrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 后置通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturningPrintLog</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"后置通知Logger类中的afterReturningPrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 最终通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterPrintLog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"最终通知Logger类中的afterPrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 环绕通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">aroundPrintLog</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"Loger类中的aroundPrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>xml文件的配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:aop</span>=<span class="string">"http://www.springframework.org/schema/aop"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="tag"><span class="string">       http://www.springframework.org/schema/beans/spring-beans.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">       http://www.springframework.org/schema/context</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://www.springframework.org/schema/context/spring-context.xsd</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://www.springframework.org/schema/aop</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://www.springframework.org/schema/aop/spring-aop.xsd"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--配置spring的AOP把service对象配置进来--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"accountService"</span> <span class="attr">class</span>=<span class="string">"cn.wolfcode.service.impl.AccountServiceImpl"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--spring 中基于xml的aop配置</span></span><br><span class="line"><span class="comment">            1.把通知bean也交给spring来管理</span></span><br><span class="line"><span class="comment">            2.使用aop:comfig标签来表明开始aop的位置</span></span><br><span class="line"><span class="comment">            3.使用aop:aspect标签配置切面</span></span><br><span class="line"><span class="comment">                id属性:给切面提供唯一id;</span></span><br><span class="line"><span class="comment">                ref属性:指定通知类bean的id</span></span><br><span class="line"><span class="comment">            4:在上述标签内部使用对应标签配置通知类型</span></span><br><span class="line"><span class="comment">                aop:before表明配置前置通知</span></span><br><span class="line"><span class="comment">                    method属性:用于指定Logger类中哪个方法是前置通知</span></span><br><span class="line"><span class="comment">                    pointcut属性:用于指定切入点表达式</span></span><br><span class="line"><span class="comment">                切入点表达式:</span></span><br><span class="line"><span class="comment">                    关键字:execution(表达式)</span></span><br><span class="line"><span class="comment">                    标准写法:访问修饰符 包名.包名...类名.方法名</span></span><br><span class="line"><span class="comment">                    访问修饰符可以省略 返回值可以使用通配符表示任意返回值</span></span><br><span class="line"><span class="comment">                    包名使用通配符表示任意包,但是有几级包就需要几个*. 包名可以使用..表示当前包和子包</span></span><br><span class="line"><span class="comment">                    类名和方法名也可以使用通配符来表示,参数列表可以直接写数类型,引用写包名.类名.或者用..表示通配</span></span><br><span class="line"><span class="comment">                    全通配写法:* *..*.*()</span></span><br><span class="line"><span class="comment">            --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"cn.wolfcode.utils.Logger"</span> <span class="attr">id</span>=<span class="string">"logger"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--配置aop--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--配置切入点表达式 有约束,必须出现在aspect标签之前--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">id</span>=<span class="string">"pt1"</span> <span class="attr">expression</span>=<span class="string">"execution( * *..*.*(..))"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">id</span>=<span class="string">"logAdivce"</span> <span class="attr">ref</span>=<span class="string">"logger"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"beforePrintLog"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">pointcut-ref</span>=<span class="string">"pt1"</span>&gt;</span><span class="tag">&lt;/<span class="name">aop:before</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after-returning</span> <span class="attr">method</span>=<span class="string">"afterReturningPrintLog"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">pointcut-ref</span>=<span class="string">"pt1"</span>&gt;</span><span class="tag">&lt;/<span class="name">aop:after-returning</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after-throwing</span> <span class="attr">method</span>=<span class="string">"afterThrowingPrintLog"</span></span></span><br><span class="line"><span class="tag">                        <span class="attr">pointcut-ref</span>=<span class="string">"pt1"</span>&gt;</span><span class="tag">&lt;/<span class="name">aop:after-throwing</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:after</span> <span class="attr">method</span>=<span class="string">"afterPrintLog"</span></span></span><br><span class="line"><span class="tag">                       <span class="attr">pointcut-ref</span>=<span class="string">"pt1"</span>&gt;</span><span class="tag">&lt;/<span class="name">aop:after</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">&lt;!--配置环绕通知--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">aop:around</span> <span class="attr">method</span>=<span class="string">"aroundPrintLog"</span> <span class="attr">pointcut-ref</span>=<span class="string">"pt1"</span>&gt;</span><span class="tag">&lt;/<span class="name">aop:around</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="基于注解的aop通知"><a href="#基于注解的aop通知" class="headerlink" title="基于注解的aop通知"></a>基于注解的aop通知</h5><p>业务层基本没变化在实现类上加上一个注解</p>
+<p>logger类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>(<span class="string">"logger"</span>)</span><br><span class="line"><span class="meta">@Aspect</span><span class="comment">//当前类是个切面类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Logger</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Pointcut</span>(<span class="string">"execution( * *..*.*(..))"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">pt2</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 前置通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//@Before("pt2()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">beforePrintLog</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"前置通知Logger类中的beforePrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 异常通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//@AfterThrowing("pt2()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterThrowingPrintLog</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"异常通知Logger类中的afterThrowingPrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 后置通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//@AfterReturning("pt2()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterReturningPrintLog</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"后置通知Logger类中的afterReturningPrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 最终通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//@After("pt2()")</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterPrintLog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"最终通知Logger类中的afterPrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 环绕通知</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Around</span>(<span class="string">"pt2()"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">aroundPrintLog</span><span class="params">(ProceedingJoinPoint pjp)</span> </span>&#123;</span><br><span class="line">        Object reValue = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Object[] args = pjp.getArgs();</span><br><span class="line">            beforePrintLog();</span><br><span class="line">            reValue = pjp.proceed(args);</span><br><span class="line">            afterReturningPrintLog();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Throwable throwable) &#123;</span><br><span class="line">            afterThrowingPrintLog();</span><br><span class="line">        &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">            afterPrintLog();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"Logger类中的aroundPrintLog方法开始记录日志了"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>xml中开启包扫描和注解支持</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"cn.wolfcode"</span>&gt;</span><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--开启注解aop支持--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aop:aspectj-autoproxy</span>&gt;</span><span class="tag">&lt;/<span class="name">aop:aspectj-autoproxy</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
       
 
@@ -206,6 +256,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -256,7 +317,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABuUlEQVR42u3aS27DMAwFwNz/0um2QGH5UYzooBitDH+k8YYQSb1e8Xj/Gus7f6/Xc75ODFxc3Db3vRxX71wtnD9dz3+1Fi4u7iR3HWjWQScJatWfvLyPi4v7ldxko5Pcx8XF/U/cvaToK+IuLi5ukVsNNJfJSTzz8VwNFxe3wc2rlOeuj9R3cXFxt7jv4ki+zVsm5dVxcXFHuNWG6F5htPrmzUYKFxd3hNuB9pOifEVcXNwZ7l6DZA/XL6bg4uI+xc1bI9VWSn/zhIuL+xS3ugXZQ+8VX3BxcSe5yQdV9F4RJEp+cHFxD3OTENMpZFTbLVFyhYuLO87tH6jqt1Fv0idcXNwR7hqdpyt7TwvJDy4u7iA3gSYbkWSGzvFQXFzceW41vcm/2lvrJpDh4uI+yu2HobzsUsjVcHFxR7j5VqMazqrjZh5cXNzD3H5Bs7PpKf8qLi7uCLcaXDrhbK90svkzuLi4bW4evKrHNXJKftQDFxd3kltuaTQOanQKK7i4uN/J7ZzyqM5zsIqDi4v7UW61xdI5ivGBVgouLm6DWy2SdpqmeyEPFxd3knsiGOU/kB/XwMXFHeH+ABtk2Fdpq8EGAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3awW7CMBAEUP7/p+mVQwkz67QS9ssJtSbhUWm73vHjEV/Pl2tlffLz/Cn1hYGB8bWM5+X1uiZ/17v3vvttsv4DFQMD4wDGuwp2veb6PskdEkbyLAwMDIz2dXL/vBxjYGBg5Izrpq0txG2biIGBgZFsRPPxWVKO203vbXtxDAyML2TkU/f/f/0n+QYGBsZXMZ7lldyhjTPbIvvLEzEwMLZmzCLMZMuabHrvbT0xMDD2Zqwc5GrjyVmPlw/yMDAwdmVcf8S8XcsPUuQBQ368DAMDY1dGu43Mx/0rhzna0oyBgYFxV+jYriyGehgYGFsz2mburpZx/UAGBgbGaYyVYKD9oPnmti30GBgYuzLypq0F3xVPFn8HDAyMrRkfFgWFsm37kvsUsSgGBsYBjLzgtgFA/tXMWkYMDIwTGCvHvFZawJWRHAYGxmmM/JH1xjKODWZhQHSuDQMDYyNGUvhmIWUbMAyRGBgYWzPy4w55o5ZTk01vPrDDwMA4jdGO+2ctYNsIfvhCMTAwDmPkRTA/NtFOydo2FAMDY2/GSgs4G9LN4oHoXwIGBsZ2jHsbuzY1nbHrWSAGBsaXM/Jr/cDWbAxXjNswMDC2ZiRFdj28bIOHdvCHgYFxAqMNAPIHJ6RZQ1lP9TAwMA5jrB/qamMDDAwMjHb0Pwsvh23fLNnAwMDYjpGX1NmBiVkRL75WDAyMrRn3xo1J2NnGk0lUgIGBsSnjBzxoZavF+4c6AAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -268,6 +329,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/06/Mybatis/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mybatis</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -286,6 +357,36 @@
 </aside>
 
 
+
+  
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="spring基础" data-title="spring基础" data-url="https://labixioazhan.github.io/2020/08/07/spring基础/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -319,7 +420,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
