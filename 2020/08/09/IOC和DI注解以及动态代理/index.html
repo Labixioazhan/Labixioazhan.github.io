@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://labixioazhan.github.io">
-  <title>Archives: 2020/8 | Boolean</title>
+  <title>IOC和DI注解以及动态代理 | Boolean</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="程序员小白">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Boolean">
-<meta property="og:url" content="https://labixioazhan.github.io/archives/2020/08/index.html">
+  <meta name="description" content="注解实现Ioc 和DIxml的配置方式可以很清楚了解ioc和DI的方式,但是配置过程较为复杂,所以要使用注解的方式简化开发. @value:注入常量值 Spring 包下的 @Autowired  可以让 Spring 自动的把属性或字段需要的对象找出来，并注入到属性上或字段上。  可以贴在字段或者 setter 方法上面。  可以同时注入多个对象。  可以注入一些 Spring 内置的重要对象，">
+<meta name="keywords" content="spring">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IOC和DI注解以及动态代理">
+<meta property="og:url" content="https://labixioazhan.github.io/2020/08/09/IOC和DI注解以及动态代理/index.html">
 <meta property="og:site_name" content="Boolean">
-<meta property="og:description" content="程序员小白">
+<meta property="og:description" content="注解实现Ioc 和DIxml的配置方式可以很清楚了解ioc和DI的方式,但是配置过程较为复杂,所以要使用注解的方式简化开发. @value:注入常量值 Spring 包下的 @Autowired  可以让 Spring 自动的把属性或字段需要的对象找出来，并注入到属性上或字段上。  可以贴在字段或者 setter 方法上面。  可以同时注入多个对象。  可以注入一些 Spring 内置的重要对象，">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-08-09T03:08:55.951Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Boolean">
-<meta name="twitter:description" content="程序员小白">
+<meta name="twitter:title" content="IOC和DI注解以及动态代理">
+<meta name="twitter:description" content="注解实现Ioc 和DIxml的配置方式可以很清楚了解ioc和DI的方式,但是配置过程较为复杂,所以要使用注解的方式简化开发. @value:注入常量值 Spring 包下的 @Autowired  可以让 Spring 自动的把属性或字段需要的对象找出来，并注入到属性上或字段上。  可以贴在字段或者 setter 方法上面。  可以同时注入多个对象。  可以注入一些 Spring 内置的重要对象，">
   
     <link rel="alternative" href="/atom.xml" title="Boolean" type="application/atom+xml">
   
@@ -139,37 +141,131 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-IOC和DI注解以及动态代理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/09/IOC和DI注解以及动态代理/" class="archive-article-date">
-  	<time datetime="2020-08-09T03:08:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/09/IOC和DI注解以及动态代理/">IOC和DI注解以及动态代理</a>
+    <h1 class="article-title" itemprop="name">
+      IOC和DI注解以及动态代理
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2020/08/09/IOC和DI注解以及动态代理/" class="archive-article-date">
+  	<time datetime="2020-08-09T03:08:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="注解实现Ioc-和DI"><a href="#注解实现Ioc-和DI" class="headerlink" title="注解实现Ioc 和DI"></a>注解实现Ioc 和DI</h4><p>xml的配置方式可以很清楚了解ioc和DI的方式,但是配置过程较为复杂,所以要使用注解的方式简化开发.</p>
+<p>@value:注入常量值</p>
+<p><strong>Spring 包下的 @Autowired</strong></p>
+<ul>
+<li><p>可以让 Spring 自动的把属性或字段需要的对象找出来，并注入到属性上或字段上。</p>
+</li>
+<li><p>可以贴在字段或者 setter 方法上面。</p>
+</li>
+<li><p>可以同时注入多个对象。</p>
+</li>
+<li><p>可以注入一些 Spring 内置的重要对象，比如 BeanFactory，ApplicationContext 等。</p>
+</li>
+<li><p>默认情况下 Autowired 注解必须要能找到对应的对象，否则报错。通过 required=false 来避免这个问题：@Autowired(required=false)。</p>
+</li>
+<li><p>Autowired 注解寻找 bean 的方式：</p>
+<p>​    首先按照依赖对象的类型找，若找到，就是用 setter 或者字段直接注入。</p>
+<p>​    如果在 Spring 上下文中找到多个匹配的类型，再按照名字去找，若没有匹配报错。</p>
+<p>​    可以通过使用 @Qualifier(“other”) 标签来规定依赖对象按照 bean 的 id 和 类型的组合方式去找。</p>
+</li>
+</ul>
+<p><strong>JavaEE下的Resource</strong></p>
+<p>Resource和Autowired使用基本类似,大多数情况下可以直接替换</p>
+<a id="more"></a>
+<p><strong>Ioc注解</strong></p>
+<p>四个注解的功能是相同的，只是用于标注不同类型的类上：</p>
+<p>@Repository：用于标注数据访问组件，即 DAO 实现类上。</p>
+<p>@Service：用于标注业务层实现类上。</p>
+<p>@Controller：用于标注控制层类上（如 SpringMVC 的 Controller）。</p>
+<p>@Component：当不是以上的话，可以使用这个注解进行标注。</p>
+<p><strong>基于注解实现登陆模拟</strong></p>
+<p>dao层设计:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserDaoImpl</span> <span class="keyword">implements</span> <span class="title">IUserDao</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> DataSource dataSource;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(String username, String password)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        Connection connection = dataSource.getConnection();</span><br><span class="line">        PreparedStatement pstmt = connection.prepareStatement(<span class="string">"insert into user (username, password) VALUES (?,?)"</span>);</span><br><span class="line">        pstmt.setString(<span class="number">1</span>,username);</span><br><span class="line">        pstmt.setString(<span class="number">2</span>,password);</span><br><span class="line">        pstmt.executeUpdate();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>service层设计</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServiceImpl</span> <span class="keyword">implements</span> <span class="title">IUserService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> IUserDao userDao;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(String username, String password)</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        userDao.save(username,password);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>xml文件中datesource的bean配置(因为这个不是自己手写的代码,是外部的代码,所以用xml实现)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:property-placeholder</span> <span class="attr">location</span>=<span class="string">"classpath:db.properties"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"cn.wolfcode"</span>&gt;</span><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:annotation-config</span>&gt;</span><span class="tag">&lt;/<span class="name">context:annotation-config</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"dataSource"</span> <span class="attr">class</span>=<span class="string">"com.alibaba.druid.pool.DruidDataSource"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">init-method</span>=<span class="string">"init"</span> <span class="attr">destroy-method</span>=<span class="string">"close"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driverClassName"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc.driverClassName&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc.url&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc.username&#125;"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"$&#123;jdbc.password&#125;"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>测试类:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line">@ContextConfiguration("classpath:springConfig.xml")</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IUserServiceTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> IUserService userService;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">()</span> <span class="keyword">throws</span> SQLException </span>&#123;</span><br><span class="line">        userService.save(<span class="string">"罗老师"</span>,<span class="string">"666"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>补充一些不常用注解</p>
+<p>@Scope：贴在类上，标明 bean 的作用域。</p>
+<p>@PostConstruct：贴在方法上，标明 bean 创建完后调用此方法。</p>
+<p>@PreDestroy：贴在方法上，标明容器销毁时调用此方法。</p>
+<h4 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h4><p><strong>分类</strong></p>
+<p>静态代理：在程序运行前就已经存在代理类的字节码文件，代理对象和真实对象的关系在运行前就确定了。（即代理类及对象要我们自己创建）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 代理类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> xuzhan</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EmployeeServicePoxy</span> <span class="keyword">implements</span> <span class="title">IEmployeeService</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> IEmployeeService target;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MyTx tx;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save</span><span class="params">(String username, String password)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            tx.begin();</span><br><span class="line">            target.save(username,password);</span><br><span class="line">            tx.commit();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"出现异常"</span>);</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            tx.close();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优缺点:</p>
+<p>业务类只需要关注业务逻辑本身，保证了业务类的重用性。把真实对象隐藏起来了，保护真实对象。</p>
+<p>代理对象的某个接口只服务于某一种类型的对象，也就是为每个真实类创建一个代理类，比如项目还有其他业务类呢。若需要代理的方法很多，则要为每一种方法都进行代理处理。若接口增加一个方法，除了所有实现类需要实现这个方法外，代理类也需要实现此方法。</p>
+<p>动态代理：代理类是在程序运行期间由 JVM 通过反射等机制动态的生成的，所以不存在代理类的字节码文件，动态生成字节码对象，代理对象和真实对象的关系是在程序运行时期才确定的。（即代理类及对象不要我们自己创建）</p>
+<p><strong>JDK动态代理</strong></p>
+<p>实现invocationHandle接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TransactionInvocationHandler</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="meta">@Qualifier</span>(<span class="string">"employeeServiceImpl"</span>)</span><br><span class="line">    <span class="keyword">private</span> Object target;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setTarget</span><span class="params">(Object target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.target = target;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getTarget</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> target;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MyTx tx;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setTx</span><span class="params">(MyTx tx)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.tx = tx;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 方法职责：负责集中处理动态代理类上的所有方法调用，让使用者自定义做什么事情， 对原来方法增强（加什么功能）。。</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> proxy 生成的代理对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> method 当前调用的真实方法对象</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> args 当前调用方法的实参</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 真实方法的返回结果</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Throwable*/</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        Object value = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            tx.begin();</span><br><span class="line">            value = method.invoke(target,args);<span class="comment">//调用真实方法的对象</span></span><br><span class="line">            tx.commit();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"出现异常"</span>);</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            tx.close();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line">@ContextConfiguration("classpath:springConfig.xml")</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TransactionInvocationHandlerTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> TransactionInvocationHandler proxy;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invoke</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * 方法职责：为指定类加载器、一组接口及调用处理器生成动态代理类实例。</span></span><br><span class="line"><span class="comment">         * 参数：</span></span><br><span class="line"><span class="comment">         * loader ：类加载器，一般传递真实对象的类加载器；</span></span><br><span class="line"><span class="comment">         * interfaces：代理类需要实现的接口；</span></span><br><span class="line"><span class="comment">         * handler：代理执行处理器，说人话就是生成代理对象帮你要做什么。</span></span><br><span class="line"><span class="comment">         * 返回：创建的代理对象。</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        IEmployeeService employeeService =</span><br><span class="line">                (IEmployeeService) Proxy.newProxyInstance(proxy.getTarget().getClass().getClassLoader()</span><br><span class="line">                        , proxy.getTarget().getClass().getInterfaces(), proxy);</span><br><span class="line">        employeeService.save(<span class="string">"suxcv"</span>,<span class="string">"1235"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优缺点:</p>
+<p>对比静态代理，发现不需手动地提供那么多代理类。</p>
+<p>真实对象必需实现接口（JDK 动态代理特有）；动态代理的最小单位是类（类中某些方法都会被处理），如果只想拦截一部分方法，可以在invoke 方法中对要执行的方法名进行判断；对多个真实对象进行代理的话，若使用 Spring 的话配置太多了，要手动创建代理对象，用起来麻</p>
+<p><strong>CGLIB动态代理</strong></p>
+<p>其他基本不变,将jdk实现的InvocationHandle接口改成org.springframework.cglib.proxy.InvocationHandler</p>
+<p>修改测试类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line">@ContextConfiguration("classpath:springConfig.xml")</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TransactionInvocationHandler2Test</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> TransactionInvocationHandler2 proxy;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invoke</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Enhancer enhancer = <span class="keyword">new</span> Enhancer();</span><br><span class="line">        <span class="comment">// 设置生成代理类继承的类</span></span><br><span class="line">        enhancer.setSuperclass(proxy.getTarget().getClass());</span><br><span class="line">        <span class="comment">// 设置生成代理类对象对象，要做什么事情</span></span><br><span class="line">        enhancer.setCallback(proxy);</span><br><span class="line">        <span class="comment">// 生成代理类，创建代理对象</span></span><br><span class="line">        EmployeeServiceImpl employeeService = (EmployeeServiceImpl) enhancer.create();</span><br><span class="line">        employeeService.save(<span class="string">"罗老师"</span>, <span class="string">"666"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>JDK 动态代理总结</strong></p>
+<p>Java 动态代理是使用 java.lang.reflect 包中的 Proxy 类与 InvocationHandler 接口这两个来完成</p>
+<p>的。要使用 JDK 动态代理，真实类必须实现接口。JDK 动态代理将会拦截所有 pubic 的方法（因为只能调用接口中定义的方法），这样即使在接口中增加了新的方法，不用修改代码也会被拦截。动态代理的最小单位是类（类中某些方法都会被处理），如果只想拦截一部分方法，可以在invoke 方法中对要执行的方法名进行判断。<strong>代理类与真实类共同实现一个接口的</strong>。 </p>
+<p><strong>CGLIB 动态代理总结</strong></p>
+<p>CGLIB 可以生成真实类的子类，并重写父类非 final 修饰符的方法。要求类不能是 final 的，要拦截的方法要是非 final、非 static、非 private 的。动态代理的最小单位是类（类中某些方法都会被处理），如果只想拦截一部分方法，可以在invoke 方法中对要执行的方法名进行判断。<strong>代理类是继承真实类</strong>。 </p>
+<p><strong>选用</strong></p>
+<p>JDK 动态代理是基于实现接口的，CGLIB 和 Javassit 是基于继承真实类的。</p>
+<p>从性能上考虑：Javassit &gt; CGLIB &gt; JDK。</p>
+<p>选用如下：若真实类实现了接口，优先选用 JDK 动态代理。（因为会产生更加松耦合的系统，也更符合面向接口编程）,若真实类没有实现任何接口，使用 Javassit 和 CGLIB 动态代理。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -181,203 +277,126 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACvElEQVR42u3awU7DMBAEUP7/p4vECYGSznjttoeXEwpRkmekeJndr6/4ePwcyZnf5/9fc3Vl8tzk+sUDDw8Pb+nVr46ra5Lz9y+a3y25w+WS4eHh4R3j5R/lJ7fbuiXcv0P0XDw8PLy38vICd379pFjHw8PD+2ReXtom55P74+Hh4X0Or73dBJAvTV7Wb8ha8PDw8GJe2wD7hJ8P9vfw8PDwBl31+YZxXygnZf3kbfHw8PBO8NrmVhsZtC2uNuaIQgo8PDy8rbw8Akg2gLWxgzaGyN8QDw8P75W8NiBot4f8477WhMPDw8M7x1srrPOQdy2AmPx/8GSTwMPDwzvAW3tkPlqahwv5sELy/nh4eHineW3Ju1aU52Fxy6tzFzw8PLySt0Zqi+n7LWdy5ydlOh4eHt5W3ry5lY8F7N0k7pcJDw8P7xyvvSiJKtrINblzXkYXbTA8PDy8AS+PVttRgHaQK4cVfxg8PDy8A7x2gGlXGJFvDGsDYXh4eHgneO0D2ji1HUdY21Quf4uHh4d3gNcWwUVgGuPzgntDGwwPDw9vzJsU0Gth7msCXDw8PLxzvLVRgOQx8w1jUuLXMwV4eHh4MS//0LfRQAs+0rfCw8PDO9USr4vmHD8p0NuQAg8PD+81vEmcuqtBlS9ZUoJf5tN4eHh4m3j5R7m9aV745tHDWsCBh4eHt5fXxg05I1mOfANoRwfw8PDwzvEmQUAe4LatrF3hLx4eHt4J3qM8WsZa+z/ZBqKWGx4eHt4B3qT+TBpa89I5/3lzeY2Hh4d3y1uLCdrRgXZddy0WHh4e3jnerjBiLaqYhBHRfAQeHh7eW3n5NtAOVLUFdDFAgIeHh/cm3n2x28YT+cc9WdDL3+Lh4eEd47VNr7URq3xRWuSTkhoPDw9vK28ypbVrgCAJcPOod9sQGh4eHt7fM99csSIWFoSmPAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/07/spring基础/" class="archive-article-date">
-  	<time datetime="2020-08-07T08:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-07</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/07/spring基础/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">spring基础</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/07/spring基础/">spring基础</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="IOC和DI注解以及动态代理" data-title="IOC和DI注解以及动态代理" data-url="https://labixioazhan.github.io/2020/08/09/IOC和DI注解以及动态代理/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/06/Mybatis/" class="archive-article-date">
-  	<time datetime="2020-08-06T10:00:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/06/Mybatis/">Mybatis</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/03/Maven/" class="archive-article-date">
-  	<time datetime="2020-08-03T06:16:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/03/Maven/">Maven的安装与配置</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/02/myPhoto/" class="archive-article-date">
-  	<time datetime="2020-08-02T06:00:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/02/myPhoto/">myPhoto</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">photo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2020/08/02/hello-world/" class="archive-article-date">
-  	<time datetime="2020-08-02T02:16:46.560Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/02/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -411,8 +430,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

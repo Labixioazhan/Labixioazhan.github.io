@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://labixioazhan.github.io">
-  <title>spring基础 | Labixiaozhan的博客</title>
+  <title>spring基础 | Boolean</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一 装配bean1.1 自动化装配Spring会从两个角度来实现自动化装配: ​                组件扫描:Spring会自动发现应用上下文中所创建的bean. ​                自动装配:Spring自动满足bean之间的依赖 @component注解用在类上表明该类会作为组件,并且告知Spring要为这个类创建bean 但是组件扫描默认时不启用的,需要显示配置sp">
 <meta name="keywords" content="Spring">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spring基础">
 <meta property="og:url" content="https://labixioazhan.github.io/2020/08/07/spring基础/index.html">
-<meta property="og:site_name" content="Labixiaozhan的博客">
+<meta property="og:site_name" content="Boolean">
 <meta property="og:description" content="一 装配bean1.1 自动化装配Spring会从两个角度来实现自动化装配: ​                组件扫描:Spring会自动发现应用上下文中所创建的bean. ​                自动装配:Spring自动满足bean之间的依赖 @component注解用在类上表明该类会作为组件,并且告知Spring要为这个类创建bean 但是组件扫描默认时不启用的,需要显示配置sp">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-08-07T08:59:12.961Z">
+<meta property="og:updated_time" content="2020-08-09T03:07:40.483Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring基础">
 <meta name="twitter:description" content="一 装配bean1.1 自动化装配Spring会从两个角度来实现自动化装配: ​                组件扫描:Spring会自动发现应用上下文中所创建的bean. ​                自动装配:Spring自动满足bean之间的依赖 @component注解用在类上表明该类会作为组件,并且告知Spring要为这个类创建bean 但是组件扫描默认时不启用的,需要显示配置sp">
   
-    <link rel="alternative" href="/atom.xml" title="Labixiaozhan的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Boolean" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -54,7 +54,7 @@
 		  <h1 class="header-author"><a href="/">徐展</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">傲傲娇娇哼哼唧唧</p>
+		<p class="header-subtitle">一个不想脱发的程序员</p>
 		
 
 		<nav class="header-menu">
@@ -104,7 +104,7 @@
 			  <h1 class="header-author js-header-author">徐展</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>傲傲娇娇哼哼唧唧<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>一个不想脱发的程序员<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -179,11 +179,12 @@
 <p> @Component(basePackageClasses={xxx.class,vvv.class}来为指定包中所包含的接口和类</p>
 <p>@Configtuation注解用于告诉Spring这是一个配置类</p>
 <p>还可以使用xml方式开启组件扫描:可以使用Springcontext命名空间</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span> = <span class="string">"包名"</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span> = <span class="string">"包名"</span>&gt;</span><span class="tag">&lt;/<span class="name">context:component-scan</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h5 id="1-2为组件扫描的bean命名"><a href="#1-2为组件扫描的bean命名" class="headerlink" title="1.2为组件扫描的bean命名"></a>1.2为组件扫描的bean命名</h5><p>默认情况下,spring会根据类名将首字母小写作为bean的id.</p>
 <p>在使用@component注解时可以传入bean的值 @Component(“name”)或者使用@named(“name)为bean起名 </p>
 <h5 id="1-3通过为bean添加注解实现自动装配"><a href="#1-3通过为bean添加注解实现自动装配" class="headerlink" title="1.3通过为bean添加注解实现自动装配"></a>1.3通过为bean添加注解实现自动装配</h5><p>@Autowired注解不仅能用在构造器上,还能用在setter方法上.如果有且只用一个bean匹配依赖需求,那么这个bean就会被装配,如果没有匹配的bean,那么在应用上下文创建的时候Spring会抛出异常.为了避免该异常你可以使用@Autowired(required=false).这样Spring会尝试自动装配,如果没有匹配的bean,会让这个bean为未装配状态,但是如果你在代码中没有进行null检查的话,就会出来你空指针异常</p>
-<p>@AutoWired时spring特定注解,如果你不想使用可以使用@Inject(源于java依赖注入桂发)注解来替换</p>
+<p>@AutoWired时spring特定注解,如果你不想使用可以使用@Resource这是javaEE的注解</p>
 <h5 id="1-4通过java代码来装配bean"><a href="#1-4通过java代码来装配bean" class="headerlink" title="1.4通过java代码来装配bean"></a>1.4通过java代码来装配bean</h5><p>有的时候自动化装配是行不通,比如将第三方库中的组件装配到你的应用中,这时候没办法使用@Component注解只能配置Spring来实现</p>
 <p>使用@Configuration来创建一个配置类,在该类中使用@Bean注解来创建bean,该注解会告诉Spring这个方法会返回一个对象,该对象注册为Spring应用上下文中的bean,同时也可以使用name=“”属性指定一个名称.</p>
 <p><strong>通过xml装配bean:</strong></p>
@@ -330,6 +331,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/08/09/IOC和DI注解以及动态代理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          IOC和DI注解以及动态代理
+        
+      </div>
+    </a>
   
   
     <a href="/2020/08/06/Mybatis/" id="article-nav-older" class="article-nav-link-wrap">
@@ -486,15 +496,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">photo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
+                <a href="javascript:void(0)" class="js-tag color2">spring</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
