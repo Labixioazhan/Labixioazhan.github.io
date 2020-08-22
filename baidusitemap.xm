@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://labixioazhan.github.io/2020/08/22/ArrayList%E6%BA%90%E7%A0%81/</loc>
+    <lastmod>2020-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://labixioazhan.github.io/2020/08/22/LinkedList%E6%BA%90%E7%A0%81/</loc>
+    <lastmod>2020-08-22</lastmod>
+  </url>
+  <url>
+    <loc>https://labixioazhan.github.io/2020/08/22/RBAC%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2020-08-22</lastmod>
+  </url>
+  <url>
     <loc>https://labixioazhan.github.io/2020/08/15/ssm%E5%AE%9E%E7%8E%B0crud/</loc>
     <lastmod>2020-08-15</lastmod>
   </url>
